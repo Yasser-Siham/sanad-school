@@ -34,11 +34,7 @@ yarn-error.log*
 .env*
 
 # Données et fichiers créés uniquement sur le serveur local
-data/local-db.json
-data/*.sqlite
-data/*.sqlite-*
-data/lesson-files/
-public/uploads/*
+
 !public/uploads/.gitkeep
 
 # typescript
