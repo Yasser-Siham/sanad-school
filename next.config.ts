@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
     serverActions: {
-      allowedOrigins: ["*.onrender.com", "localhost:3000"],
+      allowedOrigins: ["sanad-school.onrender.com", "*.onrender.com", "localhost:3000"],
     },
   },
   async headers() {
@@ -13,10 +13,8 @@ const nextConfig: NextConfig = {
       headers: [
         { key: 'X-Content-Type-Options', value: 'nosniff' },
         { key: 'X-Frame-Options', value: 'DENY' },
-        { key: 'Referrer-Policy', value: 'same-origin' },
-        { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-        { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
-        { key: 'Cross-Origin-Resource-Policy', value: 'same-origin' },
+        { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+        { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
       ],
     }];
   },
