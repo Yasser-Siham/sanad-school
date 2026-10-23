@@ -3,9 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
+    serverActions: {
+      allowedOrigins: ["*.onrender.com", "localhost:3000"],
+    },
   },
-  cacheComponents: true,
-  partialPrefetching: true,
   async headers() {
     return [{
       source: '/:path*',
